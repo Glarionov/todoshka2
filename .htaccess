@@ -2,10 +2,10 @@
 RewriteEngine On
 
 # Stop processing if already in the /public directory
-RewriteRule ^gl_php_mvc/public/ - [L]
+RewriteRule ^public/ - [L]
 
 # Static resources if they exist
-RewriteCond %{DOCUMENT_ROOT}/gl_php_mvc/public/$1 -f
+RewriteCond %{DOCUMENT_ROOT}/public/$1 -f
 RewriteRule (.+) $1 [L]
 
 # Route all other requests
